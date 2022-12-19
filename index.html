@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/w3.css">
+    <link rel="icon" href="images/logofcyt.jpg">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/1139fa79ab.js" crossorigin="anonymous"></script>
+    <title>Facultad de Ciencia y Tecnología</title>
+
+</head>
+
+<body>
+    <header id="header" class="w3-red w3-display-container">
+        <div class="w3-xxlarge w3-container w3-center w3-display-middle	">
+            <h1>Facultad de Ciencias y Tecnologías</h1>
+        </div>
+
+    </header>
+    <div class="w3-mobile w3-bar w3-border">
+        <nav>
+            <ul class="nav">
+                <li><a class="Home" href="">Generalidades</a></li>
+                <li><a class="Home" href="">Admisión</a>
+                    <ul class="navVertical">
+                        <li><a class="SubTit" href="" onclick="cambiarPantalla('becas')">Becas</a></li>
+                        <li><a class="SubTit" href="admisionRegular.html" onclick="cambiarPantalla('admisionRegular')">Admisión Regular</a></li>
+                        <li><a class="SubTit" href=""  onclick="cambiarPantalla('prepodeutico')">Internalizacion</a></li>
+                        <li><a class="SubTit" href="" onclick="cambiarPantalla('especial')">Especial</a></li>
+                    </ul>
+                </li>
+                <li><a class="Home"  href="">Pregrado</a></li>
+                <li><a class="Home"  href="">Posgrado</a></li>
+                <li><a class="Home"  href="">Investigación</a></li>
+                <li><a class="Home"  href="">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <div id="headerH">
+            <ul class="navH">
+                <li><a href=""><img src="images/menu.png"alt="" width="30"
+                    height="30"></a>
+                    <ul class="navHInicio">
+                        <li><a  href="">Generalidades</a></li>
+                        <li><a  href="">Admisión</a>
+                            <ul class="navHAR">
+                                <li><a  href="" onclick="cambiarPantalla('becas')">Becas</a></li>
+                                <li><a  href="admisionRegular.html" onclick="cambiarPantalla('admisionRegular')">Admision Regular</a></li>
+                                <li><a  href="" onclick="cambiarPantalla('prepodeutico')">Internalización</a></li>
+                                <li><a  href="" onclick="cambiarPantalla('especial')">Especial</a></li>
+                            </ul>
+                        </li>
+                        <li><a  href="">Pregrado</a></li>
+                        <li><a  href="">Posgrado</a></li>
+                        <li><a  href="">Investigación</a></li>
+                        <li><a  href="">Contáctanos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="migasDePan" class="w3-container w3-border" style="background-color: #F2F2F2;">
+        <a href="index.html">Inicio</a>
+    </div>
+
+    
+    <div class="contenidoCarrusel">
+        <div class="carrusel">
+            <div class="tarjetaCarrusel" id="Tarjeta-1">
+                <img class="imagenCarrusel" src="images/fcyt.jpg" alt="">
+            </div>
+            <div class="flechasCarrusel">
+                <a href="#Tarjeta-3"><i><img src="images/flecha-izquierda.png" alt="" width="40"
+                    height="40"></i></a>
+                <a href="#Tarjeta-2"><i><img src="images/flecha-derecha.png" alt="" width="40"
+                    height="40"></i></a>
+            </div>
+        </div>
+        <div class="carrusel">
+            <div class="tarjetaCarrusel" id="Tarjeta-2">
+                <img class="imagenCarrusel" src="images/Decanato_fcyt.jpg" alt="">
+            </div>
+            <div class="flechasCarrusel">
+                <a href="#Tarjeta-1"><i><img src="images/flecha-izquierda.png" alt="" width="40"
+                    height="40"></i></a>
+                <a href="#Tarjeta-3"><i><img src="images/flecha-derecha.png" alt="" width="40"
+                    height="40"></i></a>
+            </div>
+        </div>
+        <div class="carrusel">
+            <div class="tarjetaCarrusel" id="Tarjeta-3">
+                <img class="imagenCarrusel" src="images/umss_fcyt.png" alt="">
+            </div>
+            <div class="flechasCarrusel">
+                <a href="#Tarjeta-2"><i><img src="images/flecha-izquierda.png" alt="" width="40"
+                    height="40"></i></a>
+                <a href="#Tarjeta-1"><i><img src="images/flecha-derecha.png" alt="" width="40"
+                    height="40"></i></a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <footer class="w3-border w3-border-red" id="piePag">
+        
+        <div class="w3-left w3-padding" id="letrasPieP">
+            <p>
+                Facultad de Ciencias y Tecnología (UMSS)
+            </p>
+        </div>
+        <div class="w3-right w3-padding" id="letrasPieP">
+            <p>
+                Calle Sucre y parque La Torre <br>
+                Teléfono:591-4-4231765
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

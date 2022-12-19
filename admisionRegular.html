@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/w3.css">
+    <link rel="icon" href="images/logofcyt.jpg">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/1139fa79ab.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+    <title>Facultad de Ciencia y Tecnología</title>
+
+</head>
+
+<body onload="fillTable()">
+    <header id="header" class="w3-red w3-display-container">
+        <div class="w3-xxlarge w3-container w3-center w3-display-middle	">
+            <h1>Facultad de Ciencias y Tecnologías</h1>
+        </div>
+    </header>
+    <div class="w3-mobile w3-bar w3-border">
+        <nav>
+            <ul class="nav">
+                <li><a class="Home" href="">Generalidades</a></li>
+                <li><a class="Home" href="">Admisión</a>
+                    <ul class="navVertical">
+                        <li><a class="SubTit" href="" onclick="cambiarPantalla('becas')">Becas</a></li>
+                        <li><a class="SubTit" href="admisionRegular.html" onclick="cambiarPantalla('admisionRegular')">Admisión Regular</a></li>
+                        <li><a class="SubTit" href=""  onclick="cambiarPantalla('prepodeutico')">Internalización</a></li>
+                        <li><a class="SubTit" href="" onclick="cambiarPantalla('especial')">Especial</a></li>
+                    </ul>
+                </li>
+                <li><a class="Home"  href="">Pregrado</a></li>
+                <li><a class="Home"  href="">Posgrado</a></li>
+                <li><a class="Home"  href="">Investigación</a></li>
+                <li><a class="Home"  href="">Contáctanos</a></li>
+            </ul>
+        </nav>
+           
+        <div id="headerH">
+            <ul class="navH">
+                <li><a href=""><img src="images/menu.png"alt="" width="30"
+                    height="30"></a>
+                    <ul class="navHInicio">
+                        <li><a  href="">Generalidades</a></li>
+                        <li><a  href="">Admisión</a>
+                            <ul class="navHAR">
+                                <li><a  href="" onclick="cambiarPantalla('becas')">Becas</a></li>
+                                <li><a  href="admisionRegular.html" onclick="cambiarPantalla('admisionRegular')">Admision Regular</a></li>
+                                <li><a  href="" onclick="cambiarPantalla('prepodeutico')">Internalización</a></li>
+                                <li><a  href="" onclick="cambiarPantalla('especial')">Especial</a></li>
+                            </ul>
+                        </li>
+                        <li><a  href="">Pregrado</a></li>
+                        <li><a  href="">Posgrado</a></li>
+                        <li><a  href="">Investigación</a></li>
+                        <li><a  href="">Contáctanos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="migasDePan" class="w3-container w3-border" style="background-color: #F2F2F2;">
+        <a href="index.html">Inicio</a> >
+        <a href="admisionRegular.html">Admisión Regular</a>
+    </div>
+
+    <div id="admisionRegular" class="w3-row w3-margin">
+        <div class="w3-col m3 w3-container" id="barraInformacion">
+
+            <div class="w3-container w3-center w3-border" id="barraLateral">
+                
+                    <h4 class="avisoImportante">Información</h4>
+                <div class="w3-left w3-margin w3-button" id="opcionesInformacion" onclick="mostrarExamenIngreso()">
+                    <i class="fa-solid fa-pen-to-square" ></i>
+                    Exámen de Ingreso
+                </div>
+                <div class="w3-left w3-margin w3-button" id="opcionesInformacion"  onclick="mostrarExamenesPasados()">
+                    <i class="fa-solid fa-sheet-plastic"></i>
+                    Exámenes Pasados
+                </div>
+                <div class="w3-left w3-margin w3-button" id="opcionesInformacion" onclick="mostrarCronograma()">
+                    <i class="fa-sharp fa-solid fa-calendar"></i>
+                    Cronograma
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m9" id="cuerpoCentral">
+            <div id="examenIngreso" class="" style="display: block">
+                <h3 class="w3-center">EXAMEN DE INGRESO</h3>
+                <div class="w3-center">
+                    <img src="images/examenIngreso.png" alt="Imagen de Examen de Ingreso" width="100%"
+                    height="100%">
+                </div>
+            </div>
+            <div id="examenesPasados" class="" style="display: none">
+                <h3 class="w3-center">EXAMENES PASADOS</h3>
+                <table id="tablaExamenes" class="w3-table-all w3-text-black " >
+                    <thead>
+                      <tr class="w3-red">
+                        <th class="w3-center">Nro</th>
+                        <th>Tipo-Gestión</th>
+                        <th class="w3-center">Tamaño</th>
+                        <th class="w3-center">Descargar</th>
+                      </tr>
+                    </thead>
+
+                    
+                   
+                  </table>
+            </div>
+            <div id="cronograma" class="" style="display: none">
+                <h3 class="w3-center">CRONOGRAMA</h3>
+                <div class="w3-center">
+                    <img src="images/cronogramaImg.png" alt="Imagen de Cronograma" width="100%"
+                    height="100%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="becas" style="display: none">
+        <div class="w3-center">
+            <img src="images/becas.png" alt="">
+        </div>
+    </div>
+    <div id="prepodeutico" style="display: none">
+        <div class="w3-center">
+            <img src="images/propudeutico.png" alt="">
+        </div>
+    </div>
+    <div id="especial" style="display: none">
+        <div class="w3-center">
+            <img src="images/adminisionEspecial.jpg" alt="">
+        </div>
+    </div>
+    <br><br>
+    <footer class="w3-border w3-border-red" id="piePag">
+        
+        <div class="w3-left w3-padding" id="letrasPieP">
+            <p>
+                Facultad de Ciencias y Tecnología (UMSS)
+            </p>
+        </div>
+        <div class="w3-right w3-padding" id="letrasPieP">
+            <p>
+                Calle Sucre y parque La Torre <br>
+                Teléfono:591-4-4231765
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+#header{
+    width: 100%;
+    height: 10vh;
+    background-color: #D90416;
+    color:#D90416;
+  }
+#footer{
+    width: 100%;
+    height: 10vh;
+  }
+  
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+  background-position: center center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#w3-mobile w3-bar w3-border {
+  text-decoration:none;
+  width: 500px;
+}
+.nav{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.Home{ 
+  text-decoration:none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #023E73;
+  color: #fff;
+}
+
+.Home:hover{
+  padding: 8px 13px;
+  text-decoration:none;
+  background-color: transparent; 
+  color:#023E73;
+  border: 2px solid #023E73;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.SubTit{
+  background-color: #B0C0D2;
+  color: #023E73;
+  text-decoration:none;
+  padding: 10px 15px;
+  display: block;
+  transition: all 3000ms ease;
+}
+
+.SubTit:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #B0C0D2;
+  position: absolute;
+  top: -12px;
+  left: 20px;
+}
+
+.SubTit:hover{
+  background-color: #fff;
+  border: 2px solid #023E73;
+}
+
+.nav > li {
+  float:left;
+}
+.navVertical{
+  top:auto;
+  z-index: 10;
+  visibility: hidden;
+}
+.nav li:hover > ul {
+  display: block;
+  visibility: visible;
+}
+.nav li:hover .navVertical{
+  display: block;
+  visibility: visible;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nav li ul {
+  display:none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.nav ul li ul{
+  width: 200px;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 90px;
+  left: -5px;
+  padding: 14px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0,5);
+}
+
+.contenidoCarrusel{
+  height: 450px;
+  overflow: hidden;
+}
+.carrusel{
+  height: 100%;
+  position: relative;
+}
+
+.tarjetaCarrusel{
+  height: 100%;
+}
+
+.flechasCarrusel{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+.imagenCarrusel{
+  width: 100%;
+  height: 100%;
+  left:0;
+  top: 0;
+  opacity: 0.85;
+}
+
+
+h3{
+  color: #9D1313;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.avisoImportante{
+  color: #fff;
+  background-color: #023E73;
+}
+
+#barraLateral{
+  background-color: #B0C0D2;
+  font-size: 18px;
+}
+#tablaExamenes{
+  color: #F2F2F2;
+}
+#opcionesInformacion:hover{
+  padding: 8px 13px;
+  text-decoration:none;
+  background-color: #fff; 
+  color:#023E73;
+  border: 2px solid #023E73;
+}
+
+#migasDePan{
+  color: #9D1313;
+  font-size: 12px;
+}
+
+
+#headerH{
+  display: none;
+}
+
+/*Responsivo*/
+@media screen and (max-width: 720px){
+  
+  #header{
+    padding: 10px;
+    height: 50px;
+  }
+  
+  h1{
+    font-size: 15px;
+  }
+
+  .nav{
+    display: none;
+  }
+  #headerH{
+    display: block;
+  }
+
+  .navH li a{
+    background-color: #023E73;
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 8px;
+    display: block;
+    border: 1px solid #fff;
+  }
+
+  .navH li a:hover{
+    background-color: #B0C0D2;
+    color: #023E73;
+  }
+
+  .navH > li {
+    float:left
+  }
+
+  .navH li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+  }
+
+  .navH li:hover > ul {
+    display: block;
+    visibility: visible;
+  }
+
+  .navH li ul li{
+    position: relative;
+  }
+
+  .navH li ul li ul{
+    position: absolute;
+    top: 1px;
+    left: 140px;
+  }
+
+  .navHInicio{
+    top:auto;
+    z-index: 10;
+    visibility: hidden;
+    display: block;
+  }
+
+  .navH li:hover .navHInicio{
+    display: block;
+    visibility: visible;
+  }
+
+  .navHAR{
+    top:auto;
+    z-index: 10;
+    visibility: hidden;
+  }
+  
+  .navHInicio li:hover .navHAR{
+    display: block;
+    visibility: visible;
+  }
+
+
+  h4{
+    font-size: 18px;
+  }
+
+  #barraInformacion{
+    width: 100%;
+    padding: 5px 5px;
+    margin: 0px;
+    
+  }
+
+ #barraLateral{
+    height: 100px;
+    padding: 1;
+    position: relative;
+    display: table;
+  }
+
+  #opcionesInformacion{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    font-size: 14px;
+    display: flex;
+  }
+
+  #examenesPasados{
+    font-size: 12px;
+  }
+  
+  
+  #cuerpoCentral{
+    height: 100%;
+    width: 100%;
+    padding: 5px 5px;
+  }
+
+  .contenidoCarrusel{
+    height: 400px;
+    width: 100%;
+  }
+
+  #letrasPieP{
+    font-size: 10px;
+  }
+}
