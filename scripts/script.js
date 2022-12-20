@@ -67,7 +67,7 @@ function mostrarCronograma(){
 let idActual = "admisionRegular";
 
 function cambiarPantalla(idNuevo){
-    document.getElementById(idActual).style.display='none';
+    document.getElementById("admisionRegular").style.display='none';
     
     document.getElementById(idNuevo).style.display = 'block';
     
@@ -83,4 +83,56 @@ function myFunction() {
       x.style.display = "block";
     }
   }
-  
+
+
+barsB = document.getElementById("contenidoB");
+inputBus = document.getElementById("inputB");
+boxBus = document.getElementById("boxB");
+ bus = document.getElementById('busqueda');
+
+function mostrar_buscador(){
+    document.getElementById("contenidoB").style.display='block';
+    inputBus.focus();
+    if (inputbus.value === ""){
+        boxBus.style.display = "none";
+    }
+}
+
+function ocultar_buscador(){
+    document.getElementById("contenidoB").style.display='none';
+    document.getElementById("boxB").style.display='none';
+}
+
+document.getElementById("inputB").addEventListener("keyup", buscador);
+function buscador(){
+    document.getElementById("boxB").style.display='block';
+    document.getElementById("boxB").style.background='red;'
+}
+
+document.getElementById("inputB").addEventListener("keyup", buscador_interno);
+
+function buscador_interno(){
+
+
+    filter = document.getElementById("inputB").value.toUpperCase();
+    li = document.getElementById("boxB").getElementsByTagName("li");
+    for (i = 0; i < li.length; i++){
+
+        a = li[i].getElementsByTagName("a")[0];
+        textValue = a.textContent || a.innerText;
+
+        if(textValue.toUpperCase().indexOf(filter) > -1){
+
+            li[i].style.display = "";
+            document.getElementById("boxB").style.display = "block";
+
+            if (document.getElementById("inputB").value === ""){
+                document.getElementById("boxB").style.display = "none";
+            }
+
+        }else{
+            li[i].style.display = "none";
+        }
+
+    }
+}

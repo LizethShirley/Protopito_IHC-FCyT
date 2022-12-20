@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/w3.css">
-    <link rel="icon" href="images/logofcyt.jpg">
+    <link rel="icon" href="images/logo-fcyt-21.png" >
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/1139fa79ab.js" crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
@@ -15,15 +15,22 @@
 
 <body onload="fillTable()">
     <header id="header" class="w3-red w3-display-container">
+        <a href="index.html"><img class="logo" src="images/logoUmss.png"alt=""></a>
         <div class="w3-xxlarge w3-container w3-center w3-display-middle	">
             <h1>Facultad de Ciencias y Tecnologías</h1>
+            <h2>Universidad Mayor de San Simón</h2>
         </div>
+        <a class="logos" href="https://www.facebook.com/fcytumssOficial/"><img class="facebook" src="images/facebook.png"alt="" width="30"
+            height="30"></a>
+            <a class="logos" id="busqueda" onclick="mostrar_buscador()"><img class="lupa" src="images/lupa.png"alt="" width="30"
+                height="30"></a>
     </header>
     <div class="w3-mobile w3-bar w3-border">
         <nav>
             <ul class="nav">
                 <li><a class="Home" href="">Generalidades</a></li>
-                <li><a class="Home" href="">Admisión</a>
+                <li><a class="Home" href="">Admisión <img src="images/flecha-hacia-abajo-para-navegar.png"alt="" width="10"
+                    height="10"></a>
                     <ul class="navVertical">
                         <li><a class="SubTit" href="" onclick="cambiarPantalla('becas')">Becas</a></li>
                         <li><a class="SubTit" href="admisionRegular.html" onclick="cambiarPantalla('admisionRegular')">Admisión Regular</a></li>
@@ -48,7 +55,7 @@
                             <ul class="navHAR">
                                 <li><a  href="" onclick="cambiarPantalla('becas')">Becas</a></li>
                                 <li><a  href="admisionRegular.html" onclick="cambiarPantalla('admisionRegular')">Admision Regular</a></li>
-                                <li><a  href="" onclick="cambiarPantalla('prepodeutico')">Internalización</a></li>
+                                <li><a onclick="cambiarPantalla('prepodeutico')">Internalización</a></li>
                                 <li><a  href="" onclick="cambiarPantalla('especial')">Especial</a></li>
                             </ul>
                         </li>
@@ -61,12 +68,25 @@
             </ul>
         </div>
     </div>
+    <div id="contenidoB" style="display: none;">
+        <input type="text" id="inputB" onclick="buscador()" placeholder="¿Qué desea buscar?">
+    </div>
+    <ul id="boxB">
+        <li><a href="#"><img src="images/lupa.png"alt="" width="20" height="20"></a>Comunicados</li>
+        <li><a href="#"><img src="images/lupa.png"alt="" width="20" height="20"></a>Plantel Docente:
+            Facultad de Ciencias y Tecnologías</li>
+        <li><a href="#"><img src="images/lupa.png"alt="" width="20" height="20"></a>Comite Congreso</li>
+        <li><a href="#"><img src="images/lupa.png"alt="" width="20" height="20"></a>Carreras de la Facultad de Ciencias y Tecnologías</li>
+        <li onclick="ocultar_buscador()"><a href=""><img src="images/lupa.png"alt="" width="20" height="20"></a>Examen de Ingreso</li>
+        <li><a href="#"><img src="images/lupa.png"alt="" width="20" height="20"></a>Planten Administrativo</li>
+        <li><a href="#"><img src="images/lupa.png"alt="" width="20" height="20"></a>Noticias</li>
+    </ul>
     <div id="migasDePan" class="w3-container w3-border" style="background-color: #F2F2F2;">
         <a href="index.html">Inicio</a> >
         <a href="admisionRegular.html">Admisión Regular</a>
     </div>
 
-    <div id="admisionRegular" class="w3-row w3-margin">
+    <div id="admisionRegular" class="w3-row w3-margin" onclick="ocultar_buscador()">
         <div class="w3-col m3 w3-container" id="barraInformacion">
 
             <div class="w3-container w3-center w3-border" id="barraLateral">
@@ -83,6 +103,17 @@
                 <div class="w3-left w3-margin w3-button" id="opcionesInformacion" onclick="mostrarCronograma()">
                     <i class="fa-sharp fa-solid fa-calendar"></i>
                     Cronograma
+                </div>
+            </div>
+            <br>
+            <div class="w3-container w3-center w3-border" id="barraLateral">
+                <h4 class="avisoImportante">Lista de Correo</h4>
+                <div class="w3-left w3-margin w3-button" id="opcionesInformacion">
+                    E-mail:
+                <textarea class="entrada" id="opinion" name="opinion"></textarea>
+                </div>
+                <div class="w3-left w3-margin w3-button" id="opcionesInformacion">
+                    ¡Suscribete!
                 </div>
             </div>
         </div>
