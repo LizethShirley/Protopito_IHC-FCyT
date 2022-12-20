@@ -85,10 +85,10 @@ function myFunction() {
   }
 
 
-barsB = document.getElementById("contenidoB");
-inputBus = document.getElementById("inputB");
-boxBus = document.getElementById("boxB");
- bus = document.getElementById('busqueda');
+  function mostrar(){
+    document.getElementById("BoxSubT").style.display='block';
+}
+
 
 function mostrar_buscador(){
     document.getElementById("contenidoB").style.display='block';
@@ -101,6 +101,7 @@ function mostrar_buscador(){
 function ocultar_buscador(){
     document.getElementById("contenidoB").style.display='none';
     document.getElementById("boxB").style.display='none';
+    document.getElementById("BoxSubT").style.display='none';
 }
 
 document.getElementById("inputB").addEventListener("keyup", buscador);

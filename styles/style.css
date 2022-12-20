@@ -382,10 +382,14 @@ h3{
   }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 670px){
   #header{
     padding: 10px;
     height: 50px;
+  }
+
+  .nav{
+    font-size: 12px;
   }
   
   .logo{
