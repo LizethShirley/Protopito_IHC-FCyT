@@ -252,7 +252,7 @@ h3{
 }
 
 /*Responsivo*/
-@media screen and (max-width: 350px){
+@media screen and (max-width: 600px){
   
   #header{
     padding: 10px;
@@ -382,7 +382,7 @@ h3{
   }
 }
 
-@media screen and (max-width: 670px){
+@media screen and (max-width: 900px){
   #header{
     padding: 10px;
     height: 50px;
